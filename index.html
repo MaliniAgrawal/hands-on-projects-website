@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hands-on Projects</title>
+</head>
+<body>
+    <header>
+        <a href="https://d2j322d01bxiyd.cloudfront.net" class="back-link">← Back to Resume</a>
+        <h1>Hands-on Projects</h1>
+    </header>
+    
+    <main class="project-container">
+        <!-- Each project will appear as a card -->
+        <div class="project-card" id="mcpCliGenerator" onclick="showDescription('serverlessImageProcessing')">
+            <h2>AWS CLI Generator (MCP)</h2>
+        <div class="project-card" id="shelfLining" onclick="showDescription('shelfLining')">
+            <h2>Shelf Lining Calculator</h2>
+        </div>
+        <div class="project-card" id="thumbnailCreation" onclick="showDescription('thumbnailCreation')">
+            <h2>Thumbnail Creation Service</h2>
+        </div>
+        <div class="project-card" id="ciCdPipeline" onclick="showDescription('ciCdPipeline')">
+            <h2>Serverless API CI/CD Pipeline</h2>
+        </div>
+        <div class="project-card" id="generativeAI" onclick="showDescription('generativeAI')">
+            <h2>Generative AI Application</h2>
+        </div>
+        <div class="project-card" id="imageCombinerWebsite" onclick="showDescription('imageCombinerWebsite')">
+            <h2>Image-Combiner-Website</h2>
+        </div>
+        <div class="project-card" id="ServerlessTroubleshootingDashboard" onclick="showDescription('ServerlessTroubleshootingDashboard')">
+            <h2>Serverless Troubleshooting Dashboard</h2>
+        </div>
+    </main>
+    <section id="projectDescription" class="project-description"></section>
+    <script src="script.js"></script>
+</body>
+</html>
