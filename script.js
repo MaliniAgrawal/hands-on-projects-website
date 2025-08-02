@@ -4,7 +4,7 @@ const baseURL = "https://d2j322d01bxiyd.cloudfront.net";
 const projectData = {
     mcpCliGenerator: {
     title: "AWS CLI Generator with Natural Language (MCP)",
-    description: "Turn natural language into AWS CLI commands using a Flask server and Mangum adapter. Built with Docker and ready for serverless deployment.",
+    description: "use natural language to generate AWS CLI commands using a Flask server and Mangum adapter. Built with Docker and ready for serverless deployment.",
     github: "https://github.com/MaliniAgrawal/aws-cli-generator-mcp"
     },
         shelfLining: {
