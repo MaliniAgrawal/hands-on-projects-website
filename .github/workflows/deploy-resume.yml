@@ -23,6 +23,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-west-1
           SOURCE_DIR: ./
+          DEST_DIR: /hands-on-projects/
 
       # - name: Invalidate CloudFront cache
       #   uses: chetan/invalidate-cloudfront-action@v2
