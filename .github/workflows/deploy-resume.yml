@@ -13,22 +13,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Sync to S3
-        uses: jakejarvis/s3-sync-action@master
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          args: --delete
-        env:
-          AWS_S3_BUCKET: hands-on-projects
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-west-1
-          SOURCE_DIR: ./
-          DEST_DIR: /hands-on-projects/
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-1
+
+      - name: Sync to S3
+        run: aws s3 sync ./ s3://hands-on-projects/hands-on-projects --delete
+        # The line above is the key change. It syncs from the current directory
+        # to the 'hands-on-projects' folder within your S3 bucket.
 
       # - name: Invalidate CloudFront cache
       #   uses: chetan/invalidate-cloudfront-action@v2
       #   env:
-      #     DISTRIBUTION: EO9YJD19H7YWS   # 🔁 Use your actual distribution ID
+      #     DISTRIBUTION: EO9YJD19H7YWS
       #     PATHS: "/*"
       #     AWS_REGION: us-west-1
       #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
