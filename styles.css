@@ -1,7 +1,8 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    /* A lighter shade of green for a consistent theme */
+    background-color: #e8f5e9; 
     color: #333;
     margin: 0;
     padding: 0;
@@ -22,17 +23,26 @@ header {
     color: white;
 }
 
+/* Two-column layout for desktop */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Container for all project cards */
 .project-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
-    padding: 20px;
+    flex: 1; /* Allows the container to take up available space */
 }
 
 .project-card {
-    background-color: white;
-    border: 1px solid #ddd;
+    /* Light green background and a matching border */
+    background-color: #f7fcf7; 
+    border: 1px solid #a5d6a7; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 15px;
@@ -40,6 +50,7 @@ header {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-grow: 1; /* Allows the cards to grow and fill the space */
 }
 
 .project-card:hover {
@@ -48,14 +59,17 @@ header {
 }
 
 .project-description {
-    background-color: white;
-    border: 1px solid #ddd;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
+    /* A separate container for the description */
+    width: 350px;
+    background-color: #f7fcf7;
+    border: 1px solid #a5d6a7;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    display: none; /* Initially hide the description */
 }
 
 .project-description h2 {
@@ -66,4 +80,24 @@ header {
     color: #4CAF50;
     text-decoration: none;
     margin-right: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 900px) {
+    .main-container {
+        /* Stack the cards and description vertically */
+        flex-direction: column;
+    }
+    .project-container {
+        /* Make the card container full width */
+        width: 100%; 
+    }
+    .project-card {
+        width: 100%;
+    }
+    .project-description {
+        /* Make the description full width and not sticky */
+        width: 100%; 
+        position: static;
+    }
 }

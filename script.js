@@ -4,8 +4,9 @@ const baseURL = "https://d2j322d01bxiyd.cloudfront.net";
 const projectData = {
     mcpCliGenerator: {
     title: "AWS CLI Generator with Natural Language (MCP)",
-    description: "use natural language to generate AWS CLI commands using a Flask server and Mangum adapter. Built with Docker and ready for serverless deployment.",
-    github: "https://github.com/MaliniAgrawal/aws-cli-generator-mcp"
+    description: "use natural language to generate AWS CLI commands deployment, Key features, Single entry point with mode selection, Web interface for easy testing (--http still works), Safety confirmations in CLI mode, also agailable as python package on pypi,   .",
+    github: "https://github.com/MaliniAgrawal/aws-cli-assistant-lite.git",
+    pypi: "https://pypi.org/project/aws-cli-assistant-lite/"
     },
         shelfLining: {
         title: "Shelf Lining Calculator",

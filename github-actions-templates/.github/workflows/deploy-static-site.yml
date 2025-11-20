@@ -1,0 +1,49 @@
+name: Reusable Deploy Static Site
+
+on:
+  workflow_call:
+    inputs:
+      bucket:
+        required: true
+        type: string
+      region:
+        required: true
+        type: string
+      distribution_id:
+        required: false
+        type: string
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Sync to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: ${{ inputs.bucket }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ inputs.region }}
+          SOURCE_DIR: ./
+
+      - name: Invalidate CloudFront (Optional)
+        if: ${{ inputs.distribution_id != '' }}
+        uses: chetan/invalidate-cloudfront-action@v2
+        with:
+          distribution: ${{ inputs.distribution_id }}
+          paths: "/*"
+        env:
+          AWS_REGION: ${{ inputs.region }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
