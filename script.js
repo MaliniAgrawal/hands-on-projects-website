@@ -4,13 +4,13 @@ const baseURL = "https://d2j322d01bxiyd.cloudfront.net";
 const projectData = {
     mcpCliGenerator: {
     title: "AWS CLI Generator with Natural Language (MCP)",
-    description: "use natural language to generate AWS CLI commands deployment, Key features, Single entry point with mode selection, Web interface for easy testing (--http still works), Safety confirmations in CLI mode, also agailable as python package on pypi,   .",
+    description: "Build entirely using Amazon Q Developer in VS code, use natural language to generate AWS CLI commands deployment, Key features, Single entry point with mode selection, Web interface for easy testing (--http still works), Safety confirmations in CLI mode, also agailable as python package on pypi,   .",
     github: "https://github.com/MaliniAgrawal/aws-cli-assistant-lite.git",
     pypi: "https://pypi.org/project/aws-cli-assistant-lite/"
     },
         shelfLining: {
         title: "Shelf Lining Calculator",
-        description: "Developed a serverless web application using API Gateway and AWS Lambda to calculate shelf lining needs.  The front-end is hosted on S3, providing dynamic results based on user input.",
+        description: "Built entirely using GitHub Copilot and Amazon Q Developer in VS code, leveraging AI-generated unit test and CloudFormation snipppets that reduced development time by 40%.  The front-end is hosted on S3, providing dynamic results based on user input.",
         website: "http://balti4db.s3-website-us-west-1.amazonaws.com",
         github: "https://github.com/MaliniAgrawal/shelf-lining.git"
     },
@@ -37,7 +37,7 @@ const projectData = {
     },
     ServerlessTroubleshootingDashboard: {
       title: "Serverless-Troubleshooting",
-      description: "An automated, cost-efficient (~$0.0011/month) AWS monitoring solution using Lambda and EventBridge. Detects Lambda timeouts and S3 latency, logs issues to DynamoDB, and presents them on an S3-hosted dashboard with Pacific Time display and dynamic styling. ",
+      description: "Use Grok code and assistent to build An automated, cost-efficient (~$0.0011/month) AWS monitoring solution using Lambda and EventBridge. Detects Lambda timeouts and S3 latency, logs issues to DynamoDB, and presents them on an S3-hosted dashboard with Pacific Time display and dynamic styling. ",
       website: "http://userdata-webserver.s3-website-us-west-1.amazonaws.com",
       github: "https://github.com/MaliniAgrawal/aws-troubleshooting-dashboard.git"
 
