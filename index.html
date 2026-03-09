@@ -4,37 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Hands-on Projects</title>
+    <title>Cloud Projects & Live Demos</title>
 </head>
 <body>
     <header>
         <a href="https://d2j322d01bxiyd.cloudfront.net" class="back-link">← Back to Resume</a>
-        <h1>Hands-on Projects</h1>
+        <h1>Cloud Projects & Live Demos</h1>
     </header>
     
     <main class="project-container">
         <!-- Each project will appear as a card -->
         <div class="project-card" id="mcpCliGenerator" onclick="showDescription('mcpCliGenerator')">
-            <h2>AWS CLI Generator (MCP)</h2>
-        </div>
+            <h2>AWS CLI-NLP Assistant (MCP)</h2>
+            <p class="project-summary">Natural-language AWS CLI assistant that generates safe CLI commands using MCP integration.</p>
         </div>
         <div class="project-card" id="shelfLining" onclick="showDescription('shelfLining')">
             <h2>Shelf Lining Calculator</h2>
+            <p class="project-summary">Browser-based calculator for shelf lining and cutting plans hosted on S3.</p>
         </div>
         <div class="project-card" id="thumbnailCreation" onclick="showDescription('thumbnailCreation')">
             <h2>Thumbnail Creation Service</h2>
+            <p class="project-summary">Serverless image processing pipeline that generates thumbnails using AWS Lambda.</p>
         </div>
         <div class="project-card" id="ciCdPipeline" onclick="showDescription('ciCdPipeline')">
             <h2>Serverless API CI/CD Pipeline</h2>
+            <p class="project-summary">Automated GitHub Actions pipeline that builds, tests, and deploys serverless applications.</p>
         </div>
         <div class="project-card" id="generativeAI" onclick="showDescription('generativeAI')">
             <h2>Generative AI Application</h2>
+            <p class="project-summary">Amazon Bedrock integration for AI-powered tasks and workflows.</p>
         </div>
         <div class="project-card" id="imageCombinerWebsite" onclick="showDescription('imageCombinerWebsite')">
-            <h2>Image-Combiner-Website</h2>
+            <h2>Image Combiner</h2>
+            <p class="project-summary">Browser tool that merges two uploaded images and allows downloading the combined output.</p>
         </div>
         <div class="project-card" id="ServerlessTroubleshootingDashboard" onclick="showDescription('ServerlessTroubleshootingDashboard')">
             <h2>Serverless Troubleshooting Dashboard</h2>
+            <p class="project-summary">Serverless dashboard that simulates and displays operational issues for AWS troubleshooting practice.</p>
         </div>
     </main>
     <section id="projectDescription" class="project-description"></section>
